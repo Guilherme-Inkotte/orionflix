@@ -1,8 +1,20 @@
 import React from 'react';
-import './App.css';
+import GlobalStyles from './styles/global'
+import { Switch, Route } from 'react-router-dom'
+import Header from './components/Header'
 
 function App() {
-  return ;
+  return (
+    <>
+      <GlobalStyles />
+      <Header />
+      <main>
+        <Switch>
+          <Route />
+        </Switch>
+      </main>
+    </>
+  );
 }
 
 export default App;
