@@ -1,34 +1,73 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    height: 3.5em;
-    background: #5a1361;
+    height: auto;
+    background: rgb(87, 30, 114);
     color: #FFF;
-
-    display: flex;
-    align-items: center;
+    overflow: hidden;
     
     .logo {
-        height: 2.5em;
+        height: 3em;
+        float: left;
+        padding: 5px 25px 5px 15px;
+        background: rgb(51, 51, 51);
+        border-right: solid 3px rgb(128, 57, 161);
+    }
+
+    .dir {
+        float: right;
     }
 
     button {
-        background: none;
         border: none;
-        padding: 4px 16px;
+        outline: none;
         color: white;
-        cursor: pointer;
-        font-family: inherit;
-        font-weight: bold;
+        background-color: inherit;
+        font: inherit;
         font-size: 1.5em;
-        border-radius: 4px;
-        float: right;
-        transition: background 0.2s ease;
+        padding: .25em 1.1em;
+        height: 42px;
     }
 
-    button:hover {
-        background: #814786;
+    button:hover, .link:hover {
+        transition: background .2s ease;
+        background: rgb(128, 57, 161);
     }
 
-    
+    .link {
+        text-decoration: none;
+    }
+
+    .botao {
+        float: left;
+        font-size: 1.5em;
+        padding: .4em 1.1em;
+        height: 42px;
+        color: white;
+        text-align: center;
+    }
+
+    .conteudo-menu {
+        display: none;
+        position: absolute;
+        background-color: rgb(51, 51, 51);
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .conteudo-menu .link {
+        font-family: inherit;
+        font-size: 1.25em;
+        color: #FFF;
+        padding: 8px 16px;
+    }
+
+    .menu-filmes:hover .conteudo-menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-filmes {
+        float: left;
+    }
 `;
