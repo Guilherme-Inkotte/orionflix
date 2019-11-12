@@ -16,8 +16,7 @@ export default createGlobalStyle`
 
     body {
         font: 14px 'Roboto', sans-serif;
-        background: white;
-        color: white;
+        background: #F2F2F2;
         -webkit-font-smoothing: antialiased !important;
     }
 `;

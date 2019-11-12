@@ -1,20 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react';
 import GlobalStyles from './styles/global'
-import { Switch, Route } from 'react-router-dom'
+import Routes from  './routes'
 import Header from './components/Header'
 
-function App() {
-  return (
-    <>
-      <GlobalStyles />
-      <Header />
-      <main>
-        <Switch>
-          <Route />
-        </Switch>
-      </main>
-    </>
-  );
-}
 
-export default App;
+export default class App extends Component {
+
+  state = {
+    filmes: [],
+  }
+  removeFilme = index => {
+    const { filmes } = this.state
+  
+    this.setState({
+      filmes: filmes.filter((filme, i) => {
+        return i !== index
+      }),
+    })
+  }
+
+  handleSubmit = filme => {
+    this.setState({ filmes: [...this.state.filmes, filme] })
+  }
+
+  render() {
+    const { filmes } = this.state
+    return (
+      <>
+        <GlobalStyles />
+        <Header />
+        <div>
+          <Routes dadosFilme={filmes} removeFilme={this.removeFilme} handleSubmit={this.handleSubmit}/>
+        </div>
+      </>
+    );
+  }
+}
