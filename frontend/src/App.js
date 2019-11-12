@@ -7,7 +7,12 @@ import Header from './components/Header'
 export default class App extends Component {
 
   state = {
-    filmes: [],
+    filmes: [{
+      nome: 'As Crônicas de Nárnia',
+      genero: 'Fantasia',
+      sinopse: 'Bom',
+      preco: 30,
+    }],
   }
   removeFilme = index => {
     const { filmes } = this.state

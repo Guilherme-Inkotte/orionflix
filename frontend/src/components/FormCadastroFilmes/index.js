@@ -68,7 +68,7 @@ export default class FormCadastroFilmes extends Component {
               value={preco}
               onChange={this.handleChange} 
             />
-            <Link to="/"><button type="submit" onClick={ this.submitForm } className="btn">Cadastrar</button></Link>
+            <Link to="/listar-filmes"><button type="submit" onClick={ this.submitForm } className="btn">Cadastrar</button></Link>
           </form>
         </Container>
     );

@@ -12,8 +12,8 @@ export default class Header extends Component {
             <div className="menu-filmes">
                 <button>Filmes</button>
                 <div className="conteudo-menu">
-                    <Link className="link" to="/cadastrar-filme">Cadastrar</Link>
-                    <Link className="link" to="/">Listar</Link>
+                    <Link className="link" to="/">Cadastrar</Link>
+                    <Link className="link" to="/listar-filmes">Listar</Link>
                 </div>
             </div>
         </Container>
